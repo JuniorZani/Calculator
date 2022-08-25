@@ -17,13 +17,14 @@ function submitNumbers(numberState, number){
 }
 
 function opSelect(id){
-    if(id != operator)
+    if(secondNumber.length == 0){
+        if(id != operator)
         setColor(operator, '#00072D', 'white');
-    operator = id;
-    setColor(id, '#ffee00', '#00072D');
-    
+        operator = id;
+        setColor(id, '#ffee00', '#00072D');
+        textInput.value = Number(firstNumber);
+    }
     numberState = true;
-    textInput.value = Number(firstNumber);
 }
 
 function setColor(id, bgColor, fontColor){
