@@ -8,17 +8,27 @@ function submitNumbers(numberState, number){
             textInput.value = '';
         firstNumber += number;
     } else {
-        if(secondNumber.length == 0)
+        if(secondNumber.length == 0){
             textInput.value = '';
+        }
         secondNumber += number;
     }
     textInput.value += number;
 }
 
 function opSelect(id){
+    if(id != operator)
+        setColor(operator, '#00072D', 'white');
     operator = id;
+    setColor(id, '#ffee00', '#00072D');
+    
     numberState = true;
     textInput.value = Number(firstNumber);
+}
+
+function setColor(id, bgColor, fontColor){
+    document.getElementById(id).style.backgroundColor = bgColor;
+    document.getElementById(id).style.color = fontColor;
 }
 
 function calculate(){
@@ -38,6 +48,10 @@ function calculate(){
                 result = firstNumber * secondNumber;
                 break;
             default:
+                if(secondNumber == 0){
+                    textInput.value = 'ERROR';
+                    return;
+                }
                 result = firstNumber / secondNumber;
                 break;
         }
@@ -45,16 +59,11 @@ function calculate(){
     }
     numberState = false;
     firstNumber = secondNumber = '';
-}
-
-function toggleOps(state){
-    document.getElementById('+').disabled = state;
-    document.getElementById('-').disabled = state;
-    document.getElementById('*').disabled = state;
-    document.getElementById('/').disabled = state;
+    setColor(operator, '#00072D', 'white');
 }
 
 function clearEcho(){
     textInput.value = '';
     firstNumber = secondNumber = '';
+    setColor(operator, '#00072D', 'white');
 }

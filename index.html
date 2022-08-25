@@ -20,22 +20,29 @@
         </div>
 
         <div id="pad">
-            <input class="border-button number" type="button" value="9" onclick='submitNumbers(numberState, value)'>
+            <input class="border-button number" type="button" value='9' onclick='submitNumbers(numberState, value)'>
             <input class="top-button number" type="button" value='8' onclick='submitNumbers(numberState, value)'>
             <input class="top-button number" type="button" value='7' onclick='submitNumbers(numberState, value)'>
-            <input class="top-button operators" type="button" value='+' onclick='opSelect(value)'>
-            <input class="border-button number" type="button" value=6 onclick='submitNumbers(numberState, value)'>
+            
+            <input class="top-button operators" type="button" id='+' value='+' onclick='opSelect(value)'>
+            
+            <input class="border-button number" type="button" value='6' onclick='submitNumbers(numberState, value)'>
             <input class="number" type="button" value='5' onclick='submitNumbers(numberState, value)'>
             <input class="number" type="button" value='4' onclick='submitNumbers(numberState, value)'>
-            <input class="operators" type="button" value='-' onclick='opSelect(value)'>
-            <input class="border-button number" type="button" value=3 onclick='submitNumbers(numberState, value)'>
+            
+            <input class="operators" type="button" id="-" value='-' onclick='opSelect(value)'>
+            
+            <input class="border-button number" type="button" value='3' onclick='submitNumbers(numberState, value)'>
             <input class="number" type="button" value='2' onclick='submitNumbers(numberState, value)'>
             <input class="number" type="button" value='1' onclick='submitNumbers(numberState, value)'>
+
             <input class="operators" type='button' id='x' value='x' onclick='opSelect(value)'>
+            
             <input class="border-button number" type="button" value='0' onclick='submitNumbers(numberState, value)'>
             <input class="operators" type="button" id='CE' value='CE' onclick='clearEcho()'>
-            <input class="operators" type="button" value='=' onclick='calculate()'>
-            <input class="operators" type="button" value='/' onclick='opSelect(value)'>
+            <input class="operators" type="button" id="=" value='=' onclick='calculate()'>
+
+            <input class="operators" type="button" id="/" value='/' onclick='opSelect(value)'>
         </div>
     </section>
 </body>

@@ -29,7 +29,6 @@ section{
 }
 
 input[type=button]{
-    color: #00072D;
     text-align: center;
     font-size: 15pt;
     margin: 1%;
@@ -41,7 +40,7 @@ input[type=button]{
 
 input[type=button]:hover{
     background-color: #0A2472 !important;
-    color: white;
+    color: white !important;
     border-color: white;
 
 }
@@ -60,8 +59,8 @@ input[type=text]{
 
 .operators{
     font-size: 20pt !important;
-    background: #00072D !important;
-    color: white !important;
+    background: #00072D ;
+    color: white;
     border: 1pt solid rgba(255, 255, 255, 0.247);
 }
 
@@ -74,6 +73,7 @@ input[type=text]{
 }
 
 .number{
+    color: #00072D;
     border: 1pt solid rgba(0, 0, 0, 0.692);
 }
 
