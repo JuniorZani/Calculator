@@ -50,6 +50,10 @@ function calculate(){
             default:
                 if(secondNumber == 0){
                     textInput.value = 'ERROR';
+                    numberState = false;
+                    firstNumber = secondNumber = '';
+                    setColor(operator, '#00072D', 'white');
+                    operator = '+';
                     return;
                 }
                 result = firstNumber / secondNumber;
